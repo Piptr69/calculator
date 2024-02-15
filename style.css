@@ -54,3 +54,11 @@ body {
     font-weight: 500;
     font-size: 20px;
 }
+
+#deleteBtn {
+    background-color: rgb(252, 24, 24);
+}
+
+#clearBtn {
+    background-color: blueviolet;
+}
