@@ -1,4 +1,23 @@
 html,
 body {
     margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+#calc-body {
+    background-color: gray;
+    height: 600px;
+    width: 400px;
 }
