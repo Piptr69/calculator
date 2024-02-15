@@ -43,3 +43,12 @@ body {
     height: 100px;
     justify-content: center;
 }
+
+#clearBtn,
+#deleteBtn {
+    margin: 10px;
+    width: 170px;
+    height: 70px;
+    border: solid black 2px;
+    border-radius: 10px;
+}
