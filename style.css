@@ -29,6 +29,9 @@ body {
 }
 
 #screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
     background-color: white;
     height: 150px;
     width: 360px;
