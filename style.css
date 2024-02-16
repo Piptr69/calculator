@@ -61,11 +61,11 @@ body {
 }
 
 #deleteBtn {
-    background-color: rgb(252, 24, 24);
+    background-color: rgb(255, 170, 170);
 }
 
 #clearBtn {
-    background-color: blueviolet;
+    background-color: rgb(170, 255, 255);
 }
 
 #btnGrid {
