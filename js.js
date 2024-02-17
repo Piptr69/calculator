@@ -23,9 +23,13 @@ dotBtn.addEventListener('click', () => {
     screen.textContent = screen.textContent + '.';
 });
 
+let lastOperation = '';
+
 const smallScreen = document.querySelector("#small-screen");
 
 const addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', () => {
-    smallScreen.textContent = screen.textContent + ' + ';
+    if(lastOperation != 'add')
+    smallScreen.textContent += screen.textContent + ' + ';
+    lastOperation = 'add';
 });
