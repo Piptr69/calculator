@@ -16,3 +16,8 @@ clearBtn.addEventListener('click', () => {
     screen.textContent = '0';
 });
 
+const dotBtn = document.querySelector('#dot');
+dotBtn.addEventListener('click', () => {
+    if(!(screen.textContent.includes('.')))
+    screen.textContent = screen.textContent + '.';
+});
