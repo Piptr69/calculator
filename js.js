@@ -15,3 +15,4 @@ const clearBtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', () => {
     screen.textContent = '0';
 });
+
