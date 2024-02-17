@@ -27,5 +27,5 @@ const smallScreen = document.querySelector("#small-screen");
 
 const addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', () => {
-    smallScreen.textContent = screen.textContent + '+';
+    smallScreen.textContent = screen.textContent + ' + ';
 });
