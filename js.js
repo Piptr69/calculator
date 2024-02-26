@@ -1,7 +1,8 @@
 const screen = document.querySelector('#main-screen');
 screen.textContent = '0'
 
-const smallScreen = document.querySelector("small-screen");
+//const smallScreen = document.querySelector("#small-screen");
+//smallScreen.textContent = '';
 
 const numericButtons = document.querySelectorAll('.nbtn');
 numericButtons.forEach((button) => {
@@ -18,7 +19,7 @@ numericButtons.forEach((button) => {
 const clearBtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', () => {
     screen.textContent = '0';
-    smallScreen.textContent = '';
+    //smallScreen.textContent = '';
 });
 
 const dotBtn = document.querySelector('#dot');
@@ -50,12 +51,13 @@ let laterInput;
 const divideBtn = document.querySelector("#divideBtn");
 const multiplyBtn = document.querySelector("#multiplyBtn");
 const addBtn = document.querySelector("#addBtn");
-const SubBtn = document.querySelector("#SubBtn");
+const subBtn = document.querySelector("#subBtn");
 
 divideBtn.addEventListener('click', () => {
     currentInput = parseFloat(screen.textContent);
     currentOperation = 'divide';
     screen.textContent = '0';
+    smallScreen.textContent = currentInput + currentOperation;
 });
 
 multiplyBtn.addEventListener('click', () => {
