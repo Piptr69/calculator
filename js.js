@@ -1,8 +1,8 @@
 const screen = document.querySelector('#main-screen');
 screen.textContent = '0'
 
-//const smallScreen = document.querySelector("#small-screen");
-//smallScreen.textContent = '';
+const smallScreen = document.querySelector("#small-screen");
+smallScreen.textContent = '';
 
 const numericButtons = document.querySelectorAll('.nbtn');
 numericButtons.forEach((button) => {
@@ -19,7 +19,7 @@ numericButtons.forEach((button) => {
 const clearBtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', () => {
     screen.textContent = '0';
-    //smallScreen.textContent = '';
+    smallScreen.textContent = '';
 });
 
 const dotBtn = document.querySelector('#dot');
@@ -57,25 +57,28 @@ divideBtn.addEventListener('click', () => {
     currentInput = parseFloat(screen.textContent);
     currentOperation = 'divide';
     screen.textContent = '0';
-    smallScreen.textContent = currentInput + currentOperation;
+    smallScreen.textContent = currentInput + ' /';
 });
 
 multiplyBtn.addEventListener('click', () => {
     currentInput = parseFloat(screen.textContent);
     currentOperation = 'multiply';
     screen.textContent = '0';
+    smallScreen.textContent = currentInput + ' x';
 });
 
 addBtn.addEventListener('click', () => {
     currentInput = parseFloat(screen.textContent);
     currentOperation = 'add';
     screen.textContent = '0';
+    smallScreen.textContent = currentInput + ' +';
 });
 
 subBtn.addEventListener('click', () => {
     currentInput = parseFloat(screen.textContent);
     currentOperation = 'subtract';
     screen.textContent = '0';
+    smallScreen.textContent = currentInput + ' -';
 });
 
 
@@ -99,4 +102,5 @@ operateBtn.addEventListener('click', () => {
     laterInput = parseFloat(screen.textContent);
     let result = operate(currentInput, currentOperation, laterInput);
     screen.textContent = result;
+    smallScreen.textContent = '';
 });
