@@ -1,5 +1,6 @@
 const screen = document.querySelector('#main-screen');
 screen.textContent = '0'
+
 const numericButtons = document.querySelectorAll('.nbtn');
 numericButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -7,7 +8,7 @@ numericButtons.forEach((button) => {
             screen.textContent = button.textContent;
         }
         else {
-            screen.textContent = screen.textContent + button.textContent;
+            screen.textContent += button.textContent;
         }
     });
 });
@@ -39,7 +40,7 @@ function divide(number1, number2) {
     return number1 / number2;
 };
 
-let currentInput = screen.textContent;
+let currentInput = 0;
 let currentOperation;
 let laterInput;
 
@@ -49,38 +50,48 @@ const addBtn = document.querySelector("#addBtn");
 const SubBtn = document.querySelector("#SubBtn");
 
 divideBtn.addEventListener('click', () => {
+    currentInput = parseFloat(screen.textContent);
     currentOperation = 'divide';
+    screen.textContent = '0';
 });
 
 multiplyBtn.addEventListener('click', () => {
+    currentInput = parseFloat(screen.textContent);
     currentOperation = 'multiply';
+    screen.textContent = '0';
 });
 
 addBtn.addEventListener('click', () => {
+    currentInput = parseFloat(screen.textContent);
     currentOperation = 'add';
+    screen.textContent = '0';
 });
 
-SubBtn.addEventListener('click', () => {
+subBtn.addEventListener('click', () => {
+    currentInput = parseFloat(screen.textContent);
     currentOperation = 'subtract';
+    screen.textContent = '0';
 });
 
 
 function operate(number1, op, number2) {
     if (op === 'add') {
-        add(number1, number2);
+        return add(number1, number2);
     }
     else if (op =='subtract') {
-        subtract(number1, number2)
+        return subtract(number1, number2)
     }
     else if (op =='multiply') {
-        multiply(number1, number2)
+        return multiply(number1, number2)
     }
     else if (op =='divide') {
-        divide(number1, number2)
+        return divide(number1, number2)
     }
 };
 
-const operateBtn = document.querySelector("#opBtn")
+const operateBtn = document.querySelector("#opBtn");
 operateBtn.addEventListener('click', () => {
-    operate(currentInput, currentOperation, laterInput);
-})
+    laterInput = parseFloat(screen.textContent);
+    let result = operate(currentInput, currentOperation, laterInput);
+    screen.textContent = result;
+});
