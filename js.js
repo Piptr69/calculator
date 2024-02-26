@@ -23,13 +23,18 @@ dotBtn.addEventListener('click', () => {
     screen.textContent = screen.textContent + '.';
 });
 
-let lastOperation = '';
+function add(number1, number2) {
+    return number1 + number2;
+}
 
-const smallScreen = document.querySelector("#small-screen");
+function subtract(number1, number2) {
+    return number1 - number2;
+}
 
-const addBtn = document.querySelector('#add');
-addBtn.addEventListener('click', () => {
-    if(lastOperation != 'add')
-    smallScreen.textContent += screen.textContent + ' + ';
-    lastOperation = 'add';
-});
+function multiply(number1, number2) {
+    return number1 * number2;
+}
+divide
+function subtract(number1, number2) {
+    return number1 / number2;
+}
