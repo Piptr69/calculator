@@ -80,4 +80,7 @@ function operate(number1, op, number2) {
     }
 };
 
-const operateBtn = document.querySelector("")
+const operateBtn = document.querySelector("#opBtn")
+operateBtn.addEventListener('click', () => {
+    operate(currentInput, currentOperation, laterInput);
+})
