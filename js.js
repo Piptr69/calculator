@@ -1,5 +1,9 @@
+let input1;
+let input2;
+let operation;
+
 const screen = document.querySelector('#main-screen');
-screen.textContent = '0'
+input = '0';
 const numericButtons = document.querySelectorAll('.nbtn');
 numericButtons.forEach((button) => {
     button.addEventListener('click', () => {
