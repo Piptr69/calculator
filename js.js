@@ -1,6 +1,8 @@
 const screen = document.querySelector('#main-screen');
 screen.textContent = '0'
 
+const smallScreen = document.querySelector("small-screen");
+
 const numericButtons = document.querySelectorAll('.nbtn');
 numericButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -16,6 +18,7 @@ numericButtons.forEach((button) => {
 const clearBtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', () => {
     screen.textContent = '0';
+    smallScreen.textContent = '';
 });
 
 const dotBtn = document.querySelector('#dot');
