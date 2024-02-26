@@ -48,7 +48,23 @@ const multiplyBtn = document.querySelector("#multiplyBtn");
 const addBtn = document.querySelector("#addBtn");
 const SubBtn = document.querySelector("#SubBtn");
 
+divideBtn.addEventListener('click', () => {
+    currentOperation = 'divide';
+});
 
-function operate(number1, number2) {
-    
+multiplyBtn.addEventListener('click', () => {
+    currentOperation = 'multiply';
+});
+
+addBtn.addEventListener('click', () => {
+    currentOperation = 'add';
+});
+
+SubBtn.addEventListener('click', () => {
+    currentOperation = 'subtract';
+});
+
+
+function operate(number1, op, number2) {
+    if(op === add) 
 };
