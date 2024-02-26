@@ -66,5 +66,18 @@ SubBtn.addEventListener('click', () => {
 
 
 function operate(number1, op, number2) {
-    if(op === add) 
+    if (op === 'add') {
+        add(number1, number2);
+    }
+    else if (op =='subtract') {
+        subtract(number1, number2)
+    }
+    else if (op =='multiply') {
+        multiply(number1, number2)
+    }
+    else if (op =='divide') {
+        divide(number1, number2)
+    }
 };
+
+const operateBtn = document.querySelector("")
